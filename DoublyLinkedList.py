@@ -20,10 +20,9 @@ class DoublyLinkedList(object):
             self.prevNode = prevNode
             self.nextNode = nextNode
 
-    def __init__(self, data=None):
+    def __init__(self):
         self.first = None
         self.last = None
-        self.data = data
         self.count = 0
 
     def addFirst(self, data):
