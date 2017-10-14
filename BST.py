@@ -4,6 +4,16 @@ Binary Search Tree implementation
 Assumption:
 
 1. Duplicate values not allowed, logic implemented in 'if' statement with insert function
+
+Remove cases for node:
+
+1. Empty tree
+2. Delete at root node
+3. Value not in tree
+4. Has left child only
+5. Has right child only
+6. Has both left and right child
+
 """
 
 
@@ -70,7 +80,7 @@ class Node(object):
         if self:
             if self.leftChild:
                 self.leftChild.inorder()
-            print(str(self.value))
+            print(str(self.value), end=", ")
             if self.rightChild:
                 self.rightChild.inorder()
 
@@ -94,19 +104,21 @@ class Tree(object):
 
     def preorder(self):
         if self.root is not None:
-            print("Pre order")
+            print("Pre order:", end=" ")
             self.root.preorder()
+            print("\n")
 
     def postorder(self):
         if self.root is not None:
-            print("Post order")
+            print("Post order:", end=" ")
             self.root.postorder()
+            print("\n")
 
     def inorder(self):
         if self.root is not None:
-            print("In order")
+            print("In order:", end=" ")
             self.root.inorder()
-
+            print("\n")
 
     def remove(self, data):
         """
@@ -231,5 +243,5 @@ if __name__ == "__main__":
 
         #bst.postorder()
         #bst.preorder()
-        print(bst.inorder())
+        bst.inorder()
 
