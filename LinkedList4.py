@@ -62,7 +62,7 @@ class Intersection(object):
             currNode = currNode.next
             diff -= 1
 
-        while currNode.data != temp.data:
+        while currNode != temp:
             currNode = currNode.next
             temp = temp.next
 
@@ -89,30 +89,24 @@ if __name__ == "__main__":
         List1 = l1
         print(List1)
 
+        l7 = ListNode(1)
+        l8 = ListNode(2)
+        l9 = ListNode(3)
+        l10 = ListNode(4)
+        l11 = ListNode(13)
+        l12 = ListNode(26)
 
-        l1 = ListNode(1)
-        l2 = ListNode(2)
-        l3 = ListNode(3)
-        l4 = ListNode(4)
-        l41 = ListNode(13)
-        l42 = ListNode(26)
-        l5 = ListNode(7)
-        l6 = ListNode(8)
-        l7 = ListNode(9)
-        l8 = ListNode(10)
-
-
-        l1.next = l2
-        l2.next = l3
-        l3.next = l4
-        l4.next = l41
-        l41.next = l42
-        l42.next = l5
-        l5.next = l6
-        l6.next = l7
         l7.next = l8
+        l8.next = l9
+        l9.next = l10
+        l10.next = l11
+        l11.next = l12
+        l12.next = l3
+        l3.next = l4
+        l4.next = l5
+        l5.next = l6
 
-        List2 = l1
+        List2 = l7
 
         print(List2)
 
