@@ -26,7 +26,7 @@ class LinkedList:
                 return False
 
             if slow is fast:
-                return True
+                return slow
 
         return False
 
@@ -52,4 +52,5 @@ if __name__ == "__main__":
         l8.next_node = l5
 
         #print(l1)
+        print ("The Node where loop has been detected:", end=" ")
         print(LinkedList().loop_detection(l1).data)
